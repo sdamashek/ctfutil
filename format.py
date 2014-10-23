@@ -31,7 +31,9 @@ def proc(address, value):
     return out
 
 def calcnum(val, wrote):
-    padding = (val-wrote) % 0x100
+    wb = val + 0x100
+    ar = wrote % 0x100
+    padding = (wb-ar) % 0x100
     if padding < 10:
         padding += 0x100
     return padding
