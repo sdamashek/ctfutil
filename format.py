@@ -6,11 +6,11 @@ def proc(address, value):
     strval = hex(value)[2:]
     out = ''
     outputted = 0
-    out += struct.pack("I", address+6)
-    outputted += 4
-    out += struct.pack("I", address+4)
+    out += struct.pack("I", address+3)
     outputted += 4
     out += struct.pack("I", address+2)
+    outputted += 4
+    out += struct.pack("I", address+1)
     outputted += 4
     out += struct.pack("I", address)
     outputted += 4
